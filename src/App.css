@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* CUSTOM STYLES */
+
+.tile-container {
+  border: 5px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.tile {
+  height: 100%;
+}
+
+.tile-section {
+  height: 320px;
+  flex-basis: 320px;
+  background-color: #000;
+  margin: 1rem;
+  flex-grow: 1;
+}
+
+.tile-section .tile__dropdown {
+  display: none;
+}
+
+.tile-section.activeTile .tile__dropdown {
+  display: block;
+}
+
+.tile-section p {
+  margin: 0;
+}
+
+.tile h3 {
+  color: #fff;
+  margin: 0;
 }
