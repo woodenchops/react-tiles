@@ -30,7 +30,7 @@ class Tile extends Component {
                 <div className="tile">
                     <h3>{item.title}</h3>
                 </div>
-                <TileDropDown content={item.body}/>
+                <TileDropDown content={item.body} image={item.image}/>
 
  
             </div>

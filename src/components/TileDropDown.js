@@ -4,6 +4,7 @@ const TileDropDown = (props) => {
     return ( 
         <div className="tile__dropdown">
             <p>{props.content}</p>
+            <img src={props.image} alt="test"/>
         </div>
      );
 }

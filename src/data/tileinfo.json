@@ -1,8 +1,9 @@
 [
     {
         "title": "title one",
-        "body": "im tile one content",
-        "isActive": false
+        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptate reprehenderit. Numquam enim ut accusamus inventore ipsum voluptatibus, soluta ex quod ipsam assumenda dignissimos incidunt aut doloremque aliquid aliquam officia?",
+        "isActive": false,
+        "image": "https://placeimg.com/640/480/any"
     },
     {
         "title": "title two",

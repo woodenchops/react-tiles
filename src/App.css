@@ -50,6 +50,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1440px;
+  position: relative;
 }
 
 .tile {
@@ -64,12 +65,25 @@
   flex-grow: 1;
 }
 
+.tile:hover {
+  cursor: pointer;
+}
+
 .tile-section .tile__dropdown {
   display: none;
 }
 
+.tile-section.activeTile {
+  margin-bottom: 560px;
+}
+
 .tile-section.activeTile .tile__dropdown {
   display: block;
+  height: 550px;
+  background: #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .tile-section p {
