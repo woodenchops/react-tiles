@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './App.css';
-import TileContainer from './components/TileContainer';
+import TileComponent from './components/TileComponent';
 
 function App() {
   return (
     <div className="App">
-      <TileContainer/>
+      <TileComponent/>
     </div>
   );
 }

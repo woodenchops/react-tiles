@@ -108,7 +108,7 @@
 }
 
 .tile-section.activeTile {
-  margin-bottom: 580px;
+  margin-bottom: 570px;
 }
 
 .tile-section.activeTile .arrow-down {
@@ -116,13 +116,14 @@
 }
 
 .tile-section.activeTile .tile__dropdown {
-  display: block;
-  height: 550px;
+  display: flex;
+  min-height: 545px;
   background: #eee;
   position: absolute;
   left: 0;
   right: 0;
   margin-top: 20px;
+  padding: 1rem;
 }
 
 .tile-section p {
@@ -132,5 +133,13 @@
 .tile h3 {
   color: #fff;
   margin: 0;
+}
+
+.tile__dropdown .tile_dropdown-child {
+  flex-basis: calc(50% - 20px);
+}
+
+.tile__dropdown .tile_dropdown-child img {
+  width: 100%;
 }
 

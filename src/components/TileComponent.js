@@ -1,7 +1,7 @@
 import React from 'react';
 import Tile from "./Tile";
 
-const TileContainer = () => {
+const TileComponent = () => {
     return ( 
         <div className="container tile-container">
             <Tile/>
@@ -9,4 +9,4 @@ const TileContainer = () => {
      );
 }
  
-export default TileContainer;
+export default TileComponent;
