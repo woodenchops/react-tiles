@@ -25,14 +25,11 @@ class Tile extends Component {
             key={index} 
             onClick={()=>{this.handleDropDown(index)}} 
             >
-
-
-                <div className="tile">
+            <div className="tile" style={{backgroundImage: `url(${item.image})`}}>
                     <h3>{item.title}</h3>
+                    <div className="tile__hover-overlay"></div>   
                 </div>
-                <TileDropDown content={item.body} image={item.image}/>
-
- 
+                <TileDropDown body={item.body} image={item.image}/> 
             </div>
         ));
 

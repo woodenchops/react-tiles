@@ -55,6 +55,9 @@
 
 .tile {
   height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .tile-section {
@@ -67,6 +70,22 @@
 
 .tile:hover {
   cursor: pointer;
+}
+
+
+.tile__hover-overlay {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .67);
+  transition: opacity 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tile:hover .tile__hover-overlay {
+  opacity: 1;
 }
 
 .tile-section .tile__dropdown {
