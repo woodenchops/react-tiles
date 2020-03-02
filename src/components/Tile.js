@@ -58,6 +58,14 @@ class Tile extends Component {
             You then by targeting 'b' again, you then override the value  
 
 
+            so, for the above function that we're looking at - we copy over the contents of each object in the original array
+            e.g. title, body, isActive - we then override 'isActive' with the new value. We can do this by using a shorthand "if" statement e.g.
+
+             isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
+
+             this is checking if the id of the element clicked matches the index value of the item in the array. If so, then set its 'isActive' property to true.
+             else, set it to false
+
 
        **********************/
     
