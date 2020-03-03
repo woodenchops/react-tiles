@@ -1,20 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, createContext } from 'react';
 import data from '../data/tileinfo.json';
-import TileDropDown from './TileDropDown.js';
-import TileThumbnail from './TileThumbnail.js';
 
-class Tile extends Component {
+
+export const MasterContext = createContext();
+
+export class MasterProvider extends Component {
     state = { 
-        tiles: data
+        tiles: data,
+        handleDropDown: (id) => {
+
+            this.setState(prevState => ({
+                tiles: prevState.tiles.map((tile, i) => ({
+                  ...tile,
+                  isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
+                }))
+              }));
+            
+        }
      }
-     handleDropDown = id => {
-        this.setState(prevState => ({
-          tiles: prevState.tiles.map((tile, i) => ({
-            ...tile,
-            isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
-          }))
-        }));
-      };
+
 
       /**********************
        NOTES:
@@ -68,23 +72,13 @@ class Tile extends Component {
 
 
        **********************/
-    
-    render() {
-        let tile = this.state.tiles.map((item, index) => (
-            <div className={"tile-section " + (item.isActive ? "activeTile" : "")}  key={index}>
-                <TileThumbnail title={item.title} image={item.image} handleDropDown={this.handleDropDown} index={index}/>
-                <TileDropDown title={item.title} body={item.body} image={item.image} /> 
-            </div>
-        ));
 
-        return (
-            <Fragment>
-                {tile}
-            </Fragment> 
+    render() { 
+        return ( 
+            <MasterContext.Provider value={{...this.state}}>
+                {this.props.children}
+            </MasterContext.Provider>
          );
     }
 }
-
-
  
-export default Tile;

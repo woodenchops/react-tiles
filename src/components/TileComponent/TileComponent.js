@@ -1,5 +1,5 @@
 import React from 'react';
-import Tile from "./Tile";
+import Tile from "../TileComponent/Tile";
 
 const TileComponent = () => {
     return ( 
