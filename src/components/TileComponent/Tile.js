@@ -1,11 +1,11 @@
 import React, { Fragment, useContext } from 'react';
 import TileDropDown from '../TileComponent/TileDropDown';
 import TileThumbnail from '../TileComponent/TileThumbnail';
-import {MasterContext} from '../../contexts/masterContext';
+import {TileContext} from '../../contexts/tileContext';
 
 const Tile = () => {
 
-     const {tiles, handleDropDown} = useContext(MasterContext);
+     const {tiles, handleDropDown} = useContext(TileContext);
     
         let tile = tiles.map((item, index) => (
             <div className={"tile-section " + (item.isActive ? "activeTile" : "")} key={index}>

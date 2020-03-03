@@ -2,9 +2,9 @@ import React, { Component, createContext } from 'react';
 import data from '../data/tileinfo.json';
 
 
-export const MasterContext = createContext();
+export const TileContext = createContext();
 
-export class MasterProvider extends Component {
+export class TileProvider extends Component {
     state = { 
         tiles: data,
         handleDropDown: (id) => {
@@ -75,9 +75,9 @@ export class MasterProvider extends Component {
 
     render() { 
         return ( 
-            <MasterContext.Provider value={{...this.state}}>
+            <TileContext.Provider value={{...this.state}}>
                 {this.props.children}
-            </MasterContext.Provider>
+            </TileContext.Provider>
          );
     }
 }

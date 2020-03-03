@@ -1,5 +1,5 @@
 import React from 'react';
-import {MasterProvider} from '../src/contexts/masterContext';
+import {TileProvider} from './contexts/tileContext';
 
 import './App.css';
 import TileComponent from './components/TileComponent/TileComponent';
@@ -7,9 +7,9 @@ import TileComponent from './components/TileComponent/TileComponent';
 function App() {
   return (
     <div className="App">
-      <MasterProvider>
+      <TileProvider>
         <TileComponent/>
-      </MasterProvider>
+      </TileProvider>
     </div>
   );
 }
