@@ -45,7 +45,6 @@
 /* CUSTOM STYLES */
 
 .tile-container {
-  border: 5px solid red;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -117,6 +116,7 @@
 
 .tile-section.activeTile .tile__dropdown {
   display: flex;
+  justify-content: center;
   min-height: 545px;
   background: #eee;
   position: absolute;
@@ -141,5 +141,25 @@
 
 .tile__dropdown .tile_dropdown-child img {
   width: 100%;
+}
+
+.tile_dropdown-child--text {
+  padding: 1rem;
+}
+
+.tile_dropdown-child--text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile_dropdown-child--cta {
+  margin-top: auto;
+  background-color: cornflowerblue;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  align-self: center;
+  padding: 15px 30px;
+  text-decoration: none;
 }
 

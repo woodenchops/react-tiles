@@ -10,7 +10,7 @@ const Tile = () => {
         let tile = tiles.map((item, index) => (
             <div className={"tile-section " + (item.isActive ? "activeTile" : "")} key={index}>
                 <TileThumbnail title={item.title} image={item.image} handleDropDown={handleDropDown} index={index}/>
-                <TileDropDown title={item.title} body={item.body} image={item.image} /> 
+                <TileDropDown title={item.title} body={item.body} image={item.image} cta={item.cta} /> 
             </div>
         ));
 

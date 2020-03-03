@@ -1,9 +1,13 @@
-[
+ [
     {
         "title": "title one",
         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptate reprehenderit. Numquam enim ut accusamus inventore ipsum voluptatibus, soluta ex quod ipsam assumenda dignissimos incidunt aut doloremque aliquid aliquam officia?",
         "isActive": false,
-        "image": "src/assets/images/Cinco-de-Mayo_2-600x436.jpg"
+        "image": "https://placeimg.com/640/480/any",
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/"
+        }
     },
     {
         "title": "title two",
