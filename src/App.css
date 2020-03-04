@@ -141,6 +141,8 @@
 
 .tile__dropdown .tile_dropdown-child img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tile_dropdown-child--text {
@@ -161,5 +163,10 @@
   align-self: center;
   padding: 15px 30px;
   text-decoration: none;
+}
+
+.tile_dropdown-child--image {
+  max-height: 510px;
+  overflow: hidden;
 }
 

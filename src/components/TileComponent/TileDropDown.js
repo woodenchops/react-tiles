@@ -3,8 +3,8 @@ import React from 'react';
 const TileDropDown = (props) => {
     return ( 
         <div className="tile__dropdown">
-            <div className="tile_dropdown-child ile_dropdown-child--image">
-                 <img src={props.image} alt={props.image}/>
+            <div className="tile_dropdown-child tile_dropdown-child--image">
+                 <img src={props.image.src} alt={props.image.alt}/>
             </div>
             <div className="tile_dropdown-child tile_dropdown-child--text">
                 <h3>{props.title}</h3>
