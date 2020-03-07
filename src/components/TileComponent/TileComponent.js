@@ -1,10 +1,10 @@
 import React from 'react';
-import Tile from "../TileComponent/Tile";
+import TileSection from "./TileSection";
 
 const TileComponent = () => {
     return ( 
         <div className="container tile-container">
-            <Tile/>
+            <TileSection/>
         </div>
      );
 }

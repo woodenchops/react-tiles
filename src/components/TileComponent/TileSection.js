@@ -1,9 +1,11 @@
 import React, { Fragment, useContext } from 'react';
-import TileDropDown from '../TileComponent/TileDropDown';
-import TileThumbnail from '../TileComponent/TileThumbnail';
+import TileDropDown from './TileDropDown';
+import TileThumbnail from './TileThumbnail';
 import {TileContext} from '../../contexts/tileContext';
 
-const Tile = () => {
+
+
+const TileSection = () => {
 
      const {tiles, handleDropDown} = useContext(TileContext);
     
@@ -24,4 +26,4 @@ const Tile = () => {
 
 
  
-export default Tile;
+export default TileSection;
