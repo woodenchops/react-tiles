@@ -9,7 +9,8 @@
         },
         "cta": {
             "text": "Learn more",
-            "link": "https://reactjs.org/"
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
