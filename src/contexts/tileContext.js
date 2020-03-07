@@ -8,7 +8,6 @@ export class TileProvider extends Component {
     state = { 
         tiles: data,
         handleDropDown: (id) => {
-
             this.setState(prevState => ({
                 tiles: prevState.tiles.map((tile, i) => ({
                   ...tile,
