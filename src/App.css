@@ -52,7 +52,7 @@
   position: relative;
 }
 
-.arrow-down {
+.tile__arrow-down {
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
@@ -106,15 +106,15 @@
   display: none;
 }
 
-.tile-section.activeTile {
+.tile-section.tile-section--active-tile {
   margin-bottom: 570px;
 }
 
-.tile-section.activeTile .arrow-down {
+.tile-section.tile-section--active-tile .tile__arrow-down {
   display: block;
 }
 
-.tile-section.activeTile .tile__dropdown {
+.tile-section.tile-section--active-tile .tile__dropdown {
   display: flex;
   justify-content: center;
   min-height: 545px;

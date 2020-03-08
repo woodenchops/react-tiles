@@ -9,7 +9,7 @@ const TileThumbnail = ({image, title}) => {
             <div className="tile__hover-overlay">
                 <h3>{title}</h3>
             </div> 
-            <div className="arrow-down"></div>  
+            <div className="tile__arrow-down"></div>  
          </div>
      );
 }
