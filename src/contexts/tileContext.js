@@ -8,13 +8,29 @@ export class TileProvider extends Component {
     state = { 
         tiles: data,
         handleDropDown: (id) => {
-            this.setState(prevState => ({
+                
+        this.setState(prevState => ({
                 tiles: prevState.tiles.map((tile, i) => ({
-                  ...tile,
-                  isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
+                    ...tile,
+                    isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
                 }))
-              }));
-            
+            }));
+                   
+        },
+
+        handleDropDownKeyPress: (id, e) => {
+
+            if(e.key === 'Enter'){
+                
+                this.setState(prevState => ({
+                    tiles: prevState.tiles.map((tile, i) => ({
+                      ...tile,
+                      isActive: ( id === i ) ? !this.state.tiles[id].isActive : false
+                    }))
+                  }));
+
+            }
+
         }
      }
 

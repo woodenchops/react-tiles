@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 
 
-const TileThumbnail = ({image, handleDropDown, title, index}) => {
+const TileThumbnail = ({image, title}) => {
     return ( 
-        <div className="tile" style={{backgroundImage: `url(${image.src})`}}  onClick={()=>{handleDropDown(index)}}>
+        <div className="tile" style={{backgroundImage: `url(${image.src})`}}>
             <div className="tile__hover-overlay">
                 <h3>{title}</h3>
             </div> 
@@ -17,8 +17,6 @@ const TileThumbnail = ({image, handleDropDown, title, index}) => {
 TileThumbnail.propTypes = {
     image: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-    handleDropDown: PropTypes.func.isRequired,
-    index: PropTypes.number.isRequired
   }
  
 export default TileThumbnail;

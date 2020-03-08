@@ -6,10 +6,10 @@ import Tile from './Tile';
 
 const TileSection = () => {
 
-     const {tiles, handleDropDown} = useContext(TileContext);
+     const {tiles, handleDropDown, handleDropDownKeyPress} = useContext(TileContext);
     
         let tile = tiles.map((item, index) => (
-            <Tile item={item} index={index} handleDropDown={handleDropDown} key={index}/>
+            <Tile item={item} index={index} handleDropDown={handleDropDown} handleDropDownKeyPress={handleDropDownKeyPress} key={index}/>
         ));
 
         return (
