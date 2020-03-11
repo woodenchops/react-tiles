@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {TileContext} from '../../contexts/tileContext';
 import PropTypes from 'prop-types';
 
 
 
-const TileThumbnail = ({image, title, index, handleDropDownKeyPress, handleDropDown}) => {
+const TileThumbnail = ({image, title, index}) => {
+
+    const {handleDropDownKeyPress, handleDropDown} = useContext(TileContext);
     return ( 
-        <div className="tile" style={{backgroundImage: `url(${image.src})`}}tabIndex="0" onKeyPress={(e) => {handleDropDownKeyPress(index, e)}} onClick={()=>{handleDropDown(index)}}>
+        <div className="tile" style={{backgroundImage: `url(${image.src})`}} tabIndex="0" onKeyPress={(e) => {handleDropDownKeyPress(index, e)}} onClick={()=>{handleDropDown(index)}}>
             <div className="tile__hover-overlay">
                 <h3>{title}</h3>
             </div> 
@@ -17,9 +20,7 @@ const TileThumbnail = ({image, title, index, handleDropDownKeyPress, handleDropD
 TileThumbnail.propTypes = {
     image: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    handleDropDownKeyPress: PropTypes.func.isRequired,
-    handleDropDown: PropTypes.func.isRequired
+    index: PropTypes.number.isRequired
   }
  
 export default TileThumbnail;
