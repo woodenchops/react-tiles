@@ -1,12 +1,10 @@
 import React, { Component, createContext } from 'react';
-import data from '../data/tileinfo.json';
-
 
 export const TileContext = createContext();
 
 export class TileProvider extends Component {
     state = { 
-        tiles: data,
+        tiles: [],
         handleDropDown: (id) => {
                 
         this.setState(prevState => ({
@@ -31,7 +29,20 @@ export class TileProvider extends Component {
 
             }
 
+        },
+
+        fetchData: async (url) => {
+            let res = await fetch(url)
+            let data = await res.json();
+
+            return data
         }
+     }
+
+     componentDidMount() {
+        this.state.fetchData('/data/tileInfo.json')
+        .then((res) => {this.setState({tiles: res}); console.log(res);})
+        .catch((err) => {console.log(err);})
      }
 
 
