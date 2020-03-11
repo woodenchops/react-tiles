@@ -4,6 +4,7 @@ export const TileContext = createContext();
 
 export class TileProvider extends Component {
     state = { 
+        loading: true,
         tiles: [],
         handleDropDown: (id) => {
                 
@@ -41,7 +42,7 @@ export class TileProvider extends Component {
 
      componentDidMount() {
         this.state.fetchData('/data/tileInfo.json')
-        .then((res) => {this.setState({tiles: res}); console.log(res);})
+        .then((res) => {this.setState({tiles: res, loading: false}); console.log(res);})
         .catch((err) => {console.log(err);})
      }
 
