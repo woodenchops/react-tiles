@@ -4,6 +4,7 @@ export const TileContext = createContext();
 
 export class TileProvider extends Component {
     state = {
+        tileShowCount: 8,
         loading: true,
         tiles: [],
         handleDropDown: (id) => {
@@ -56,7 +57,7 @@ export class TileProvider extends Component {
      }
 
      componentDidMount() {
-        this.state.loadTiles(8);
+        this.state.loadTiles(this.state.tileShowCount);
      }
 
 

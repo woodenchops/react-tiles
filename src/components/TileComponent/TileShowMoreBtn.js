@@ -3,8 +3,8 @@ import { TileContext } from '../../contexts/tileContext';
 
 const TileLoadMore = () => {
 
-    const {loadTiles} = useContext(TileContext);
-    let [updatedTilesCount, setTilesCount] = useState(8);
+    const {loadTiles, tileShowCount} = useContext(TileContext);
+    let [updatedTilesCount, setTilesCount] = useState(tileShowCount);
     return (
         <Fragment>
             <button className="tile-load-more" 
