@@ -18,9 +18,7 @@ const Tile = ({item, index}) => {
 
 Tile.propTypes = {
     item: PropTypes.object.isRequired,
-    index: PropTypes.number.isRequired,
-    handleDropDown: PropTypes.func.isRequired,
-    handleDropDownKeyPress: PropTypes.func.isRequired 
+    index: PropTypes.number.isRequired
   }
  
 export default Tile;

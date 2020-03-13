@@ -3,7 +3,7 @@ import React, { Component, createContext } from 'react';
 export const TileContext = createContext();
 
 export class TileProvider extends Component {
-    state = { 
+    state = {
         loading: true,
         tiles: [],
         handleDropDown: (id) => {
@@ -37,13 +37,26 @@ export class TileProvider extends Component {
             let data = await res.json();
 
             return data
+        },
+
+        loadTiles: (num) => {
+
+            this.state.fetchData('/data/tileInfo.json')
+                .then((res) => {
+                    this.setState( prevState => {
+                            return {
+                                tiles: res.slice(0, num), 
+                                loading: false
+                            }
+                        });
+                    })
+                .catch((err) => {console.log(err);})
+          
         }
      }
 
      componentDidMount() {
-        this.state.fetchData('/data/tileInfo.json')
-        .then((res) => {this.setState({tiles: res, loading: false}); console.log(res);})
-        .catch((err) => {console.log(err);})
+        this.state.loadTiles(8);
      }
 
 
