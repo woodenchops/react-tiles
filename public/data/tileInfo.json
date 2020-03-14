@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "title": "title one",
         "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptate reprehenderit. Numquam enim ut accusamus inventore ipsum voluptatibus, soluta ex quod ipsam assumenda dignissimos incidunt aut doloremque aliquid aliquam officia?",
         "isActive": false,
@@ -20,6 +21,11 @@
         "image": {
             "src": "/images/sunset-640x436-600x436.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -29,6 +35,11 @@
         "image": {
             "src": "/images/47465154_134044920932104_2189700034490806114_n.jpg",
             "alt": "some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -36,8 +47,13 @@
         "body": "im tile four content",
         "isActive": false,
         "image": {
-            "src": "/images/Bonfire-S´mores-1.jpg",
+            "src": "/images/Bonfire-Smores-1.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -45,8 +61,13 @@
         "body": "im tile five content",
         "isActive": false,
         "image": {
-            "src": "/images/Father´s-Day.jpg",
+            "src": "/images/Fathers-Day.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -56,6 +77,11 @@
         "image": {
             "src": "/images/Memorial-Day_2-2.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -65,6 +91,11 @@
         "image": {
             "src":"/images/Thanksgiving.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -74,6 +105,11 @@
         "image": {
             "src":"/images/VivaMexico_Website1.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -97,6 +133,11 @@
         "image": {
             "src": "/images/sunset-640x436-600x436.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -106,6 +147,11 @@
         "image": {
             "src": "/images/47465154_134044920932104_2189700034490806114_n.jpg",
             "alt": "some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -113,8 +159,13 @@
         "body": "im tile four content",
         "isActive": false,
         "image": {
-            "src": "/images/Bonfire-S´mores-1.jpg",
+            "src": "/images/Bonfire-Smores-1.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -122,8 +173,13 @@
         "body": "im tile five content",
         "isActive": false,
         "image": {
-            "src": "/images/Father´s-Day.jpg",
+            "src": "/images/Fathers-Day.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -133,6 +189,11 @@
         "image": {
             "src": "/images/Memorial-Day_2-2.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
@@ -142,6 +203,11 @@
         "image": {
             "src":"/images/Thanksgiving.jpg",
             "alt":"some text"
+        },
+        "cta": {
+            "text": "Learn more",
+            "link": "https://reactjs.org/",
+            "open": true
         }
     },
     {
