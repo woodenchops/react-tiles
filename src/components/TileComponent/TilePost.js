@@ -19,31 +19,28 @@ const TilePost = (props) => {
 
 
 
-    let singlePost = (post.length > 0) ? (
+    let singlePost = (post.length > 0) && (
         post.map((item) => (
             <div className="con">
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-                <img src={item.image.src} alt={item.image.alt}/>
-                
-                {(item.cta) ? (
+                {(item.title) ? (<h3>{item.title}</h3>) : (<h3>This post doesn't have a title</h3>)}
+                {(item.body) ? (<p>{item.body}</p>) : (<p>This post doesn't have text content</p>)}
+                {(item.image) && (<img src={item.image.src} alt={item.image.alt}/>)}         
+                {(item.cta) && (
                     <div className="single-post__cta-container">
-                        <a href={item.cta.link} className="single-post__cta">{item.cta.text}</a>
+                        <a href={item.cta.link} className="single-post__cta">Book now</a>
                     </div>
-                ) : (
-                    <p>no cta</p>
                 )}
             </div>
         ))
-    ) : ('no post')
+    ) 
 
 
-    console.log('sibnlg', singlePost)
+    console.log('single', singlePost)
 
     return(
 
         <div className="single-post">
-            {singlePost[id]}
+            {(singlePost) && (singlePost[id])}
         </div>
 
     )
