@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {TileContext} from '../../contexts/tileContext'; 
+import {TileContext} from '../../contexts/tileContext';
+import {Link} from 'react-router-dom';
 
 
 const TilePost = (props) => {
@@ -18,7 +19,8 @@ const TilePost = (props) => {
                 setpost(data);
                 setLoading(false);
             }).catch((err) => {
-                console.log(`oooops! something went wrong... err: ${err}`);
+                setLoading(false);
+                console.log(err);
             })
     }, [fetchData, urlParam])
 
@@ -35,7 +37,13 @@ const TilePost = (props) => {
                 )}
         </div>
     )) : (
-        <p>Looks like there is no post...</p>
+        <div className="err no-post">
+            <p>Looks like there is no post...</p>
+            <div className="single-post__cta-container">
+                 <Link to="/" className="single-post__cta">Go back to homepage</Link>
+            </div>
+        </div>
+        
     )
 
     return(
