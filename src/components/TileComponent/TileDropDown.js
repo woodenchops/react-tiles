@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const TileDropDown = ({image, title, body, cta, index}) => {
+const TileDropDown = ({image, title, body, cta, index, id}) => {
  
     return ( 
         <div className="tile__dropdown">
@@ -12,7 +12,7 @@ const TileDropDown = ({image, title, body, cta, index}) => {
             <div className="tile_dropdown-child tile_dropdown-child--text">
                 <h3>{title}</h3>
                 <p>{body}</p>
-                {(cta) && (<Link to={'/' + index} className="tile_dropdown-child--cta" target={(cta.open) && ("_blank")} rel="noopener noreferrer">{cta.text}</Link>)}
+                {(cta) && (<Link to={'/' + id} className="tile_dropdown-child--cta">{cta.text}</Link>)}
             </div>
         </div>
      );

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {TileProvider} from './contexts/tileContext';
 
 import './App.css';
@@ -10,11 +10,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <TileProvider>
+          <Switch>
 
-      <TileProvider>
-        <Route exact path="/" component={TileComponent}/>
-        <Route path="/:post_id" component={TilePost}/>
-      </TileProvider>
+            <Route exact path="/" component={TileComponent}/>
+            <Route path="/:post_id" component={TilePost}/>
+
+          </Switch>
+        </TileProvider>
       </BrowserRouter>
     </div>
   );
