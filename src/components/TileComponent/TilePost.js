@@ -38,7 +38,7 @@ const TilePost = (props) => {
         </div>
     )) : (
         <div className="err no-post">
-            <p>Looks like there is no post...</p>
+            <p>{`Looks like there is no post... "${urlParam}"`}</p>
             <div className="single-post__cta-container">
                  <Link to="/" className="single-post__cta">Go back to homepage</Link>
             </div>
