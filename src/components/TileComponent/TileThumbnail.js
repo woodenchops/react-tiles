@@ -8,7 +8,7 @@ const TileThumbnail = ({image, title, index}) => {
 
     const {handleDropDownKeyPress, handleDropDown} = useContext(TileContext);
     return ( 
-        <div className="tile" style={{backgroundImage: `url(${image.src})`}} tabIndex="0" onKeyPress={(e) => {handleDropDownKeyPress(index, e)}} onClick={()=>{handleDropDown(index)}}>
+        <div className="tile" style={(image) && ({backgroundImage: `url(${image.src})`})} tabIndex="0" onKeyPress={(e) => {handleDropDownKeyPress(index, e)}} onClick={()=>{handleDropDown(index)}}>
             <div className="tile__hover-overlay">
                 <h3>{title}</h3>
             </div> 

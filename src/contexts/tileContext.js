@@ -4,7 +4,7 @@ export const TileContext = createContext();
 
 export class TileProvider extends Component {
     state = {
-        tileShowCount: 8,
+        tileShowCount: 1,
         loading: true,
         tiles: [],
         handleDropDown: (id) => {
@@ -40,16 +40,18 @@ export class TileProvider extends Component {
             return data
         },
 
-        loadTiles: (num) => {
+        loadTiles: () => {
 
-            this.state.fetchData('/data/tileInfo.json')
+            this.state.fetchData(`http://localhost:5000/api/posts?page=${this.state.tileShowCount}`)
                 .then((res) => {
                     this.setState( prevState => {
                             return {
-                                tiles: res.slice(0, num), 
-                                loading: false
+                                tiles: [...prevState.tiles, ...res],
+                                loading: false,
+                                tileShowCount: prevState.tileShowCount += 1
                             }
                         });
+                        console.log('tiles:', this.state.tiles);
                     })
                 .catch((err) => {console.log(err);})
           
@@ -57,9 +59,8 @@ export class TileProvider extends Component {
      }
 
      componentDidMount() {
-        this.state.loadTiles(this.state.tileShowCount);
+        this.state.loadTiles();
      }
-
 
       /**********************
        NOTES:

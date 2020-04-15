@@ -75,6 +75,7 @@
 .tile-section {
   height: 320px;
   flex-basis: 320px;
+  max-width: 320px;
   background-color: #000;
   margin: 1rem;
   flex-grow: 1;
@@ -198,6 +199,38 @@
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+
+.form-group label {
+  display: block;
+  text-align: left;
+}
+
+form {
+  max-width: 700px !important;
+  margin: 1rem auto;
+}
+
+form textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.form-group input {
+  width: 100% !important;
+  padding: 10px 20px;
+}
+
+.post-added-success,
+.post-added-fail {
+  background: #30ca30;
+  color: #fff;
+  padding: 10px;
+}
+
+.post-added-fail {
+  background: red;
 }
 
 @media screen and (max-width:1024px) {

@@ -9,7 +9,7 @@ const TileSection = () => {
      const {tiles} = useContext(TileContext);
     
         let tile = tiles.map((item, index) => (
-            <Tile item={item} index={index} key={index}/>
+            <Tile item={item} index={index} key={index} slug={item.slug}/>
         ));
 
         return (

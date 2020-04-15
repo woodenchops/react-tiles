@@ -1,17 +1,15 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import { TileContext } from '../../contexts/tileContext';
 
 const TileLoadMore = () => {
 
-    const {loadTiles, tileShowCount} = useContext(TileContext);
-    let [updatedTilesCount, setTilesCount] = useState(tileShowCount);
+    const {loadTiles} = useContext(TileContext);
     return (
         <div className="tile-load-more-container">
 
         <button className="tile-load-more"  
             onClick={() => {
-                setTilesCount(() => (updatedTilesCount += 8));
-                loadTiles(updatedTilesCount);
+                loadTiles();
             }}>
             LOAD MORE
             </button>
